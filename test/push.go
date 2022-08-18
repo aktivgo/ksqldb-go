@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
-	ksqldb "ksqldb-go"
+	ksqldb "github.com/aktivgo/ksqldb-go"
 	"time"
 )
 

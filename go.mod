@@ -1,4 +1,4 @@
-module ksqldb-go
+module github.com/aktivgo/ksqldb-go
 
 go 1.13
 

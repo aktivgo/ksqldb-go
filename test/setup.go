@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	ksqldb "ksqldb-go"
+	ksqldb "github.com/aktivgo/ksqldb-go"
 	"time"
 )
 
