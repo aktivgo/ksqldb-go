@@ -24,14 +24,15 @@ import (
 // which will hold one or more rows of data. You will need to
 // define variables to hold each column's value. You can adopt
 // this pattern to do this:
-// 		var COL1 string
-// 		var COL2 float64
-// 		for _, row := range r {
-// 			COL1 = row[0].(string)
-// 			COL2 = row[1].(float64)
-// 			// Do other stuff with the data here
-// 			}
-// 		}
+//
+//	var COL1 string
+//	var COL2 float64
+//	for _, row := range r {
+//		COL1 = row[0].(string)
+//		COL2 = row[1].(float64)
+//		// Do other stuff with the data here
+//		}
+//	}
 func (cl *Client) Pull(ctx context.Context, q string, s bool) (h Header, r Payload, err error) {
 
 	// Create the request
@@ -39,7 +40,6 @@ func (cl *Client) Pull(ctx context.Context, q string, s bool) (h Header, r Paylo
 	// payload := strings.NewReader("{\"sql\":\"" + q + "\"}")
 
 	req, err := http.NewRequestWithContext(ctx, "POST", cl.url+"/query-stream", payload)
-	fmt.Printf("%+v", payload)
 
 	if err != nil {
 		return h, r, err

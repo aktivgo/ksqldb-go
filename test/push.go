@@ -3,9 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
+	ksqldb "ksqldb-go"
 	"time"
-
-	"github.com/rmoff/ksqldb-go"
 )
 
 func getDogUpdates(client *ksqldb.Client) (err error) {

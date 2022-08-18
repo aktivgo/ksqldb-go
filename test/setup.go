@@ -2,9 +2,8 @@ package main
 
 import (
 	"fmt"
+	ksqldb "ksqldb-go"
 	"time"
-
-	"github.com/rmoff/ksqldb-go"
 )
 
 func setup() (*ksqldb.Client, error) {
